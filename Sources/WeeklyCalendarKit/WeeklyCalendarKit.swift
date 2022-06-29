@@ -133,7 +133,7 @@ private extension Date {
 }
 
 
-private extension DateFormatter {
+public extension DateFormatter {
     convenience init(dateFormat: String, calendar: Calendar) {
         self.init()
         self.dateFormat = dateFormat
