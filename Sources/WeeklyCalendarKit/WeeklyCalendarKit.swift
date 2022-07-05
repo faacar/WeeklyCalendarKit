@@ -60,8 +60,6 @@ public struct WeeklyCalendarKit<Header: View, Content: View>: View {
                         }
                     }
             )
-
-            Divider()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }
@@ -138,6 +136,6 @@ public extension DateFormatter {
         self.init()
         self.dateFormat = dateFormat
         self.calendar = calendar
-        self.locale = Locale(identifier: "en")
-    }
+        self.locale = Locale.current
+        self.timeZone = NSTimeZone.system    }
 }
